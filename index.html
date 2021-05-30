@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="./assets/reset.css">
+  <!-- bootstrap link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <!-- center classes -->
+    <div class="container-fluid d-flex justify-content-center">
+      <a class="navbar-brand weather-dash" href="#">  
+      Weather Dashboard
+      </a>
+    </div>
+  </nav>
+
+  <main class="row">
+    <!-- search col -->
+    <aside class="col-3 fill" style="background-color: #DEE7E7;">
+      <br>
+      <section class="container">
+        <label for="searchCity" class="form-label">Search by City: </label>
+        <form>
+          <div class="d-flex .justify-content-sm-between">
+            <input type="search" placeholder="Search" aria-label="search" name="" id="searchCity" class="form-control me-2">
+
+            <button id="submit" class="btn btn-outline-success" type="submit">Search</button>
+          </div>
+        </form>
+      </section>
+      <br>
+      <section class="container">
+        <ul id="searchHistory" class="list-group"></ul>
+        <br>
+        <button id="clearHistory" type="button" class="btn btn-outline-danger">Clear</button>
+      </section>
+    </aside>
+      
+    <article class="col-9">
+      <br>
+
+      <section class="container">
+        <div class="row">
+          <div id="data">
+            <!-- stuff go here -->
+          </div>
+        </div>
+        <br>
+        <h2>5 day forecast: </h2>
+        <figure id="forecastCard" class="d-flex .justify-content-sm-between">
+          
+        </figure>
+      </section>
+
+    </article>
+
+
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script src="./assets/app.js"></script>
+</body>
+</html>
